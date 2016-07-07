@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/rlOptions"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ivScreenShot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/ivScreenShotText"
+            android:layout_above="@+id/butAnaliseColours"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tvColourValues1"
+            android:layout_toEndOf="@+id/tvColourValues1" />
+
+        <Button
+            android:id="@+id/butAnaliseColours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/butAnaliseColourText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/butPutColours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/butPutColoursText"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/butAnaliseColours"
+            android:layout_toEndOf="@+id/butAnaliseColours" />
+
+        <Button
+            android:id="@+id/butNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/butNextText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvColourValues1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFFFFFFF"
+            android:textColor="#FF000000"
+            android:layout_alignBottom="@+id/ivScreenShot" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvColourValues2"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvColourValues1"
+            android:layout_toEndOf="@+id/tvColourValues1"
+            android:layout_above="@+id/butAnaliseColours" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvColourValues3"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvColourValues2"
+            android:layout_toEndOf="@+id/tvColourValues2"
+            android:layout_alignBottom="@+id/tvColourValues1" />
+    </RelativeLayout>
+
+</RelativeLayout>

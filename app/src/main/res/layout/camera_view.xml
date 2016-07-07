@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlCamera">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/show_camera_activity_java_surface_view"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            opencv:camera_id="any"
+            opencv:show_fps="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/butCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="#80363636"
+            android:textColor="#FFFFFFFF"
+            android:alpha="10"
+            android:text="@string/butCaptureText"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFFFF"
+            android:id="@+id/swFlash"
+            android:text="@string/swFlashText"
+            android:layout_alignParentBottom="true"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
