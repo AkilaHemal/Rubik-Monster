@@ -39,7 +39,6 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
 
     protected Camera mCamera;
     protected JavaCameraFrame[] mCameraFrame;
-    private SurfaceTexture mSurfaceTexture;
 
     public static class JavaCameraSizeAccessor implements ListItemAccessor {
 
@@ -190,7 +189,7 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
                     mCameraFrame[1] = new JavaCameraFrame(mFrameChain[1], mFrameWidth, mFrameHeight);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                        mSurfaceTexture = new SurfaceTexture(MAGIC_TEXTURE_ID);
+                        SurfaceTexture mSurfaceTexture = new SurfaceTexture(MAGIC_TEXTURE_ID);
                         mCamera.setPreviewTexture(mSurfaceTexture);
                     } else
                        mCamera.setPreviewDisplay(null);
@@ -354,7 +353,7 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
         }
     }
 
-    private static boolean isFlashLightON = false;
+    public boolean isFlashLightON = false;
     public void setupCameraFlashLight(boolean On) {
         Camera camera = mCamera;
         if (camera != null) {

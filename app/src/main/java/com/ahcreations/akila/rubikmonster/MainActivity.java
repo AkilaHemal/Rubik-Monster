@@ -11,6 +11,10 @@ public class MainActivity extends AppCompatActivity {
 
     static Fragment fr = null;
 
+    static char[][] CubeColours = new char[6][9];
+    static int sideComplete = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        sideComplete = 0;
+        super.onResume();
+    }
+
     public void ShowColourDitectionView(){
         fr = new Camera_Class(this);
         FragmentManager fm = getFragmentManager();
@@ -43,5 +53,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
+
+
 
 }

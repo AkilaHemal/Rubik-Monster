@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Rubik Monster</string>
-    <string name="swFlashText">Flash</string>
+    <string name="butFlashText">Flash</string>
     <string name="butCaptureText">Capture</string>
     <string name="ivScreenShotText">Captured Image</string>
     <string name="butAnaliseColourText">Analise Colours</string>

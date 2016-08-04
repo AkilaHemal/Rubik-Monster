@@ -30,18 +30,22 @@
             android:textColor="#FFFFFFFF"
             android:alpha="10"
             android:text="@string/butCaptureText"
-            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/butFlash"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/butFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="#80363636"
+            android:textColor="#FFFFFFFF"
+            android:alpha="10"
+            android:text="@string/butFlashText"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFFFF"
-            android:id="@+id/swFlash"
-            android:text="@string/swFlashText"
-            android:layout_alignParentBottom="true"
-            android:checked="false" />
 
     </RelativeLayout>
 
